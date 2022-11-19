@@ -1,32 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { useEffect, useState } from 'react'
+import logo_white from './assets/logo_white.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [form, setForm] = useState({
+    domain: '',
+  });
+
+  const [data, setData] = useState([]);
+  const [stats, setStats] = useState({
+    date: 0,
+    domain: 0,
+    sub: 0,
+  })
+
+  useEffect(() => {
+    fetch('https://columbus.elmasy.com/stat')
+      .then(response => response.json())
+      .then(stats => setStats(stats))
+  }, [])
+
+  const handleSubmit = (e: any) => {
+    console.log('A name was submitted: ' + form.domain);
+    fetch(`https://columbus.elmasy.com/lookup/${form.domain}`)
+      .then((response) => response.json())
+      .then((data) => setData(data.map((d: string) => `${d}.${form.domain}`)));
+    e.preventDefault();
+  }
+
+  const list = data.map((d: string, index: number) => <li key={index}>{d}</li>);
+  const stat = <p>{`As of ${new Date(stats.date * 1000).toDateString()}, ${stats.domain} number of domain and ${stats.sub} number of subdomains are in the database.`}</p>
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header className='header'>
+        <img src={logo_white} alt="Elmasy logo" />
+        <h1>Columbus Project</h1>
+      </header>
+      <section>
+        <form className='search-form' onSubmit={handleSubmit}>
+          <input type="text" placeholder="Domain name" value={form.domain} onChange={e => {
+              setForm({
+                ...form,
+                domain: e.target.value
+              });
+            }}/>
+          <input type='submit' value="Submit"></input>
+        </form>
+        <ul className='domain-list'>
+            {list}
+        </ul>
+      </section>
+      <footer className='footer'>
+        {stat}
+      </footer>
     </div>
   )
 }
