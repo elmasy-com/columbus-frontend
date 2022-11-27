@@ -43,6 +43,9 @@ section {
 
 .search-form input[type=submit] {
   flex-grow: 1;
+  border: none;
+  background: var(--clr-accent);
+  font-weight: bold;
 }
 
 .domain-list {

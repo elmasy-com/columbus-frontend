@@ -13,6 +13,9 @@ function App() {
     domain: 0,
     sub: 0,
   })
+  const [error, setError] = useState({
+    error: null
+  });
 
   useEffect(() => {
     fetch('https://columbus.elmasy.com/stat')
@@ -24,7 +27,15 @@ function App() {
     console.log('A name was submitted: ' + form.domain);
     fetch(`https://columbus.elmasy.com/lookup/${form.domain}`)
       .then((response) => response.json())
-      .then((data) => setData(data.map((d: string) => `${d}.${form.domain}`)));
+      .then((data) => {
+        if (!data.error) {
+          setData(data.map((d: string) => `${d}${d? '.' : ''}${form.domain}`));
+        } else {
+          setError(data);
+          throw new Error(data.error);
+        }
+      });
+
     e.preventDefault();
   }
 
@@ -45,8 +56,11 @@ function App() {
                 domain: e.target.value
               });
             }}/>
-          <input type='submit' value="Submit"></input>
+          <input type='submit' value="Find"></input>
         </form>
+        <div className='error'>
+          {error.error}
+        </div>
         <ul className='domain-list'>
             {list}
         </ul>
