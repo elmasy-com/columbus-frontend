@@ -29,9 +29,11 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         if (!data.error) {
+          setError({error: null});
           setData(data.map((d: string) => `${d}${d? '.' : ''}${form.domain}`));
         } else {
           setError(data);
+          setData([]);
           throw new Error(data.error);
         }
       });
