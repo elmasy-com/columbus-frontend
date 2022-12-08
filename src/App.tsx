@@ -41,7 +41,7 @@ function App() {
     e.preventDefault();
   }
 
-  const list = data.map((d: string, index: number) => <li key={index}>{d}</li>);
+  const list = data.map((d: string, index: number) => <span className='sub-domain' key={index}>{d}</span>);
   const stat = <p>{`As of ${new Date(stats.date * 1000).toDateString()}, ${stats.domain} number of domain and ${stats.sub} number of subdomains are in the database.`}</p>
 
   return (
@@ -50,22 +50,22 @@ function App() {
         <img src={logo_white} alt="Elmasy logo" />
         <h1>Columbus Project</h1>
       </header>
+      <form className='search-form' onSubmit={handleSubmit}>
+        <input type="text" placeholder="Domain name" value={form.domain} onChange={e => {
+            setForm({
+              ...form,
+              domain: e.target.value
+            });
+          }}/>
+        <input type='submit' value="Find"></input>
+      </form>
+      <div className='error'>
+        {error.error}
+      </div>
       <section>
-        <form className='search-form' onSubmit={handleSubmit}>
-          <input type="text" placeholder="Domain name" value={form.domain} onChange={e => {
-              setForm({
-                ...form,
-                domain: e.target.value
-              });
-            }}/>
-          <input type='submit' value="Find"></input>
-        </form>
-        <div className='error'>
-          {error.error}
-        </div>
-        <ul className='domain-list'>
+        <div className='domain-list'>
             {list}
-        </ul>
+        </div>
       </section>
       <footer className='footer'>
         {stat}

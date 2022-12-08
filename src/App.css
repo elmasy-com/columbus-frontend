@@ -4,18 +4,21 @@
 }
 
 .App {
-  width: 800px;
+  max-width: 800px;
+  padding: 1em;
   position: relative;
 }
 
 .header {
-  height: 300px;
+  max-height: 300px;
+  margin: 2em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .header h1 {
+  text-align: center;
   color: var(--clr-primary-color);
 }
 
@@ -54,13 +57,21 @@ section {
 }
 
 .domain-list {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
+
 }
 
-.domain-list li{
-  
+.sub-domain {
+  display: inline-block;
+  padding: .2em .5em;
+  margin: .1em;
+  background-color: var(--clr-secondary-background);
+  transition: all ease .8s;
+}
+
+.sub-domain:hover {
+  font-size: 1.2rem;
+  color: var(--clr-background);
+  background-color: var(--clr-accent);
 }
 
 .footer {
