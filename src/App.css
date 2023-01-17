@@ -57,22 +57,26 @@ section {
 }
 
 .domain-list {
-
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .sub-domain {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff;
   display: inline-block;
   padding: .2em .5em;
   margin: .1em;
   background-color: var(--clr-secondary-background);
-  transition: all ease .8s;
+  /*transition: all ease .8s;*/
 }
 
-.sub-domain:hover {
+/*.sub-domain:hover {
   font-size: 1.2rem;
   color: var(--clr-background);
   background-color: var(--clr-accent);
-}
+}*/
 
 .footer {
   height: 25px;

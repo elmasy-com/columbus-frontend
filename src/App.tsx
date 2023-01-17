@@ -24,7 +24,7 @@ function App() {
   }, [])
 
   const handleSubmit = (e: any) => {
-    console.log('A name was submitted: ' + form.domain);
+    form.domain = form.domain.toLocaleLowerCase();
     fetch(`https://columbus.elmasy.com/lookup/${form.domain}`)
       .then((response) => response.json())
       .then((data) => {
