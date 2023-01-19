@@ -25,18 +25,23 @@ function App() {
 
   const handleSubmit = (e: any) => {
     form.domain = form.domain.toLocaleLowerCase();
-    fetch(`https://columbus.elmasy.com/lookup/${form.domain}`)
+    fetch(`https://columbus.elmasy.com/tools/domain/${form.domain}`).then((response) => response.json())
+    .then(data => {
+      const { result } = data; 
+      form.domain = result;
+      fetch(`https://columbus.elmasy.com/lookup/${result}`)
       .then((response) => response.json())
       .then((data) => {
         if (!data.error) {
           setError(data);
-          setData(data.map((d: string) => `${d}${d? '.' : ''}${form.domain}`));
+          setData(data.map((d: string) => `${d}${d? '.' : ''}${result}`));
         } else {
           setError(data);
           setData([]);
           throw new Error(data.error);
         }
       });
+    })
 
     e.preventDefault();
   }
