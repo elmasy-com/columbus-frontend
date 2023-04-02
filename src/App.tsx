@@ -54,8 +54,7 @@ function App() {
       <header className='header'>
         <img src={logo_white} alt="Elmasy logo" />
         <h1>Columbus Project</h1>
-      </header>
-      <form className='search-form' onSubmit={handleSubmit}>
+        <form className='search-form' onSubmit={handleSubmit}>
         <input type="text" placeholder="Domain name" value={form.domain} onChange={e => {
             setForm({
               ...form,
@@ -67,6 +66,8 @@ function App() {
       <div className='error'>
         {error.error}
       </div>
+      </header>
+
       <section>
         <div className='domain-list'>
             {list}
