@@ -24,7 +24,7 @@
 
 		<a
 			class="btn btn-l variant-ghost-primary my-9"
-			href="blog.elmasy.com/introducing-the-columbus-project/ ">Read more on the blog!</a
+			href="https://blog.elmasy.com/introducing-the-columbus-project/ ">Read more on the blog!</a
 		>
 	</div>
 </div>
