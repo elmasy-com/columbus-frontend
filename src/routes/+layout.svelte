@@ -18,7 +18,7 @@
 	}
 </script>
 
-<Drawer position="right" width="20rem">
+<Drawer position="right" width="10rem">
 	<h2 class="p-4">Navigation</h2>
 	<hr />
 	<Navigation />
@@ -36,18 +36,25 @@
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<!-- Buttons visible on big screen, invisible on mobile -->
-				<a class="btn btn-sm variant-ghost-primary invisible lg:visible" href="/about"> About </a>
-				<a class="btn btn-sm variant-ghost-primary invisible lg:visible" href="/tools"> Tools </a>
-				<a class="btn btn-sm variant-ghost-primary invisible lg:visible" href="/swagger/index.html">
+				<a class="btn btn-sm variant-ghost-primary max-lg:hidden lg:visible" href="/about">
+					About
+				</a>
+				<a class="btn btn-sm variant-ghost-primary max-lg:hidden lg:visible" href="/tools">
+					Tools
+				</a>
+				<a
+					class="btn btn-sm variant-ghost-primary max-lg:hidden lg:visible"
+					href="/swagger/index.html"
+				>
 					API
 				</a>
 
-				<a class="btn btn-sm variant-ghost-primary invisible lg:visible" href="/contact">
+				<a class="btn btn-sm variant-ghost-primary max-lg:hidden lg:visible" href="/contact">
 					Contact
 				</a>
 
 				<!-- Sidebar visible on small screen, invisible on big screen -->
-				<div class="flex items-center lg:invisible">
+				<div class="flex items-center lg:hidden">
 					<button class=" btn btn-sm mr-4" on:click={drawerOpen}>
 						<span>
 							<svg viewBox="0 0 100 80" class="fill-token w-4 h-4">
