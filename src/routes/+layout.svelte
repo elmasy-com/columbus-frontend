@@ -18,8 +18,8 @@
 	}
 </script>
 
-<Drawer position="right" width="10rem">
-	<h2 class="p-4">Navigation</h2>
+<Drawer position="right" width="15rem">
+	<h2 class="py-4 px-8">Navigation</h2>
 	<hr />
 	<Navigation />
 </Drawer>
