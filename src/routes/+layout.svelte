@@ -42,6 +42,9 @@
 				<a class="btn btn-sm variant-ghost-primary max-md:hidden md:visible" href="/tools">
 					Tools
 				</a>
+				<a class="btn btn-sm variant-ghost-primary max-md:hidden md:visible" href="/roadmap">
+					Roadmap
+				</a>
 				<a
 					class="btn btn-sm variant-ghost-primary max-md:hidden md:visible"
 					href="/swagger/index.html"
