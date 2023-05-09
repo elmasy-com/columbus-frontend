@@ -36,28 +36,28 @@
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<!-- Buttons visible on big screen, invisible on mobile -->
-				<a class="btn btn-sm variant-ghost-primary max-lg:hidden lg:visible" href="/about">
+				<a class="btn btn-sm variant-ghost-primary max-md:hidden md:visible" href="/about">
 					About
 				</a>
-				<a class="btn btn-sm variant-ghost-primary max-lg:hidden lg:visible" href="/tools">
+				<a class="btn btn-sm variant-ghost-primary max-md:hidden md:visible" href="/tools">
 					Tools
 				</a>
 				<a
-					class="btn btn-sm variant-ghost-primary max-lg:hidden lg:visible"
+					class="btn btn-sm variant-ghost-primary max-md:hidden md:visible"
 					href="/swagger/index.html"
 				>
 					API
 				</a>
 
-				<a class="btn btn-sm variant-ghost-primary max-lg:hidden lg:visible" href="/contact">
+				<a class="btn btn-sm variant-ghost-primary max-md:hidden md:visible" href="/contact">
 					Contact
 				</a>
 
 				<!-- Sidebar visible on small screen, invisible on big screen -->
-				<div class="flex items-center lg:hidden">
+				<div class="flex items-center md:hidden">
 					<button class=" btn btn-sm mr-4" on:click={drawerOpen}>
 						<span>
-							<svg viewBox="0 0 100 80" class="fill-token w-4 h-4">
+							<svg viewBox="0 0 100 80" class="fill-token w-4 h-6">
 								<rect width="100" height="20" />
 								<rect y="30" width="100" height="20" />
 								<rect y="60" width="100" height="20" />
@@ -73,7 +73,7 @@
 	<slot />
 
 	<svelte:fragment slot="footer">
-		<div class="container h-full mx-auto flex justify-center items-center">
+		<div class="container h-full mx-auto flex justify-center items-center mt-4">
 			<div class="space-y-10 text-center">
 				<p class="pb-5">Columbus Project is a module of <a href="https://elmasy.com">Elmasy</a>.</p>
 			</div>

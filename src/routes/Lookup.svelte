@@ -45,17 +45,18 @@
 	{#await promise}
 		<!-- Print only, when domain is set -->
 		{#if domain != ''}
-			<p>...waiting</p>
 			<ProgressBar />
 		{/if}
 	{:then subs}
 		<!-- Print only when domain and subs are set -->
 		{#if domain != '' && subs != undefined}
 			{#if subs.length != 0}
-				<p>Found {subs.length} subdomain.</p>
+				<p class="mx-10 mb-5 py-2 border-2 border-primary-500">
+					Number of subdomains found: <b>{subs.length}</b>
+				</p>
 			{/if}
 
-			<ol class="list">
+			<ol class="list sm:columns-2 md:columns-3">
 				{#each subs as subdomain}
 					<li>
 						{#if subdomain == ''}
@@ -98,11 +99,5 @@
 	}
 	form input {
 		padding: 0.2em;
-	}
-
-	ol {
-		columns: 3;
-		-webkit-columns: 2;
-		-moz-columns: 2;
 	}
 </style>
