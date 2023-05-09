@@ -4,7 +4,7 @@ info:
   description: |
     Columbus API sepcification.
     
-    The API endpoints `Access-Control-Allow-Origin` header is always set to `*` to allow integration into other sites.
+    The `Access-Control-Allow-Origin` header on the API endpoints is always set to `*` to allow integration into other sites.
   contact:
     email: info@elmasy.com
   license:
