@@ -33,7 +33,7 @@
 			<TimelineItem
 				title="The Privacy, Security, & OSINT Show"
 				timestamp="01/2023"
-				description="Columbus Project is featured in Episode 288. Thanks you!"
+				description="Columbus Project is featured in Episode 288. Thank you!"
 				badgeText="Show"
 			>
 				<a
