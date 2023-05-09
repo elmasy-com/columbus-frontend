@@ -9,8 +9,8 @@
 	import IsValid from './IsValid.svelte';
 </script>
 
-<div class="container h-full mx-auto flex justify-center items-center w-650 min-w-ful">
-	<div class="space-y-10 text-center max-sm:basis-11/12 sm:basis-3/5 md:basis-2/4 lg:basis-2/5">
+<div class="container h-full mx-auto flex justify-center items-center">
+	<div class="space-y-10 text-center max-sm:basis-10/12 sm:basis-3/5 md:basis-3/5">
 		<h1 class="font-bold">Tools</h1>
 
 		<hr />
