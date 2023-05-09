@@ -5,7 +5,7 @@ SWAGGER_CONF="window.onload = function() {
 
   // the following lines will be replaced by docker/configurator, when it runs in a docker-container
   window.ui = SwaggerUIBundle({
-    url: \"https://columbus.elmasy.com/openapi.yaml\",
+    url: \"/openapi.yaml\",
     dom_id: '#swagger-ui',
     deepLinking: true,
     presets: [
