@@ -9,8 +9,8 @@
 	import IsValid from './IsValid.svelte';
 </script>
 
-<div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-10 text-center">
+<div class="container h-full mx-auto flex justify-center items-center w-650 min-w-ful">
+	<div class="space-y-10 text-center max-sm:basis-11/12 sm:basis-3/5 md:basis-2/4 lg:basis-2/5">
 		<h1 class="font-bold">Tools</h1>
 
 		<hr />
@@ -118,7 +118,7 @@
 					<p class="text-left">
 						Returns whether FQDN is a valid domain.
 						<br />
-						Example:
+						Examples:
 						<br />
 						<code>/api/tools/isvalid/columbus.elmasy.com</code> -> <code>true</code>
 						<br />
@@ -131,40 +131,7 @@
 		</Accordion>
 
 		<a class="btn btn-l variant-ghost-primary" href="/swagger/index.html"
-			>Check the API documentation!</a
+			>Read the API documentation!</a
 		>
 	</div>
 </div>
-
-<style lang="postcss">
-	/* figure {
-		@apply flex relative flex-col;
-	} */
-	/* figure svg,
-	.img-bg {
-		@apply w-64 h-64 md:w-80 md:h-80;
-	} */
-	/* .img-bg {
-		@apply absolute z-[-1] rounded-full blur-[50px] transition-all;
-		animation: pulse 5s cubic-bezier(0, 0, 0, 0.5) infinite, glow 5s linear infinite;
-	} */
-	@keyframes glow {
-		0% {
-			@apply bg-primary-400/50;
-		}
-		33% {
-			@apply bg-secondary-400/50;
-		}
-		66% {
-			@apply bg-tertiary-400/50;
-		}
-		100% {
-			@apply bg-primary-400/50;
-		}
-	}
-	@keyframes pulse {
-		50% {
-			transform: scale(1.5);
-		}
-	}
-</style>
