@@ -31,8 +31,8 @@
 		<link rel="modulepreload" href="./_app/immutable/chunks/AppShell.bfd6cc92.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.8eb38531.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.bd571f79.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/2.c5145d77.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/7.1ab2a3c6.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/4.c5145d77.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/9.4982e0ce.js">
 </head>
 
 <body data-sveltekit-preload-data="hover">
@@ -96,42 +96,71 @@
 
 			
 			<main id="page-content" class="flex-auto ">
-	<div class="container h-full mx-auto flex justify-center items-center"><div class="space-y-10 text-center max-sm:basis-10/12 sm:basis-3/5 md:basis-3/5"><h1 class="font-bold mt-10">About</h1>
+	<div class="container h-full mx-auto flex justify-center items-center"><div class="max-sm:basis-10/12 sm:basis-3/5 md:basis-3/5"><h1 class="font-bold my-10 text-center">Roadmap</h1>
 
-		<hr>
+		<hr class="text-center mb-20">
 
-		<h4 class="max-sm:mx-6">Columbus Project is a subdomain discovery service with an easy to integrate API.
-		</h4>
+		<ol class="relative border-l border-surface-400-500-token"><li class="mb-10 ml-10">
+	
+	<span class="absolute flex items-center justify-center w-6 h-6 variant-filled-primary rounded-full -left-3 ring-8 ring-surface-200-700-token"></span>
 
-		<p class="max-sm:mx-6">Columbus Project is a subdomain discovery service with an easy to integrate API.
-			<br>
-			An <a href="https://github.com/elmasy-com?q=columbus&type=all&language=&sort=">open source</a>
-			append only database of known subdomains. The goals are to discover, store and serve subdomains
-			as fast as possible with an easy to use API.
-		</p>
+	<h3 class="flex items-center mb-1 space-x-2 -translate-y-2"><span>Cetificate Transparency Logs</span>
+		<span class="badge variant-soft-primary">Source</span></h3>
+	<time class="block mb-2">08/2022</time>
+	<p class="mb-4 opacity-75">Started parsing more than 4 billion entry across 10 logs.</p>
+	
+	</li>
+			<li class="mb-10 ml-10">
+	
+	<span class="absolute flex items-center justify-center w-6 h-6 variant-filled-primary rounded-full -left-3 ring-8 ring-surface-200-700-token"></span>
 
-		<img class="mx-auto max-w-screen-lg max-lg:hidden lg:visible" src="/gif/lookup.gif" alt="Subdomain Lookup">
+	<h3 class="flex items-center mb-1 space-x-2 -translate-y-2"><span>Subdomain Lookup</span>
+		<span class="badge variant-soft-primary">Feature</span></h3>
+	<time class="block mb-2">10/2022</time>
+	<p class="mb-4 opacity-75">First feature implemented: return every known subdomain for the given domain.</p>
+	
+	<div><a href="/"><button class="btn variant-ghost-primary">Try it out!</button></a></div></li>
+			<li class="mb-10 ml-10">
+	
+	<span class="absolute flex items-center justify-center w-6 h-6 variant-filled-primary rounded-full -left-3 ring-8 ring-surface-200-700-token"></span>
 
-		<h2 class="max-sm:mx-6">Sources</h2>
+	<h3 class="flex items-center mb-1 space-x-2 -translate-y-2"><span>Alpha Release</span>
+		<span class="badge variant-soft-primary">Release</span></h3>
+	<time class="block mb-2">12/2022</time>
+	<p class="mb-4 opacity-75">Releases the alpha version of the Columbus Project. With a lot of optimization and an enterprise server, Columbus responds in ~0.3 seconds with 601 results. More than 1.7 millionlookup on the first 3 day!</p>
+	
+	</li>
+			<li class="mb-10 ml-10">
+	
+	<span class="absolute flex items-center justify-center w-6 h-6 variant-filled-primary rounded-full -left-3 ring-8 ring-surface-200-700-token"></span>
 
-		<h3 class="max-sm:mx-6">Certificate Transparency</h3>
+	<h3 class="flex items-center mb-1 space-x-2 -translate-y-2"><span>The Privacy, Security, &amp; OSINT Show</span>
+		<span class="badge variant-soft-primary">Show</span></h3>
+	<time class="block mb-2">01/2023</time>
+	<p class="mb-4 opacity-75">Columbus Project is featured in Episode 288. Thanks you!</p>
+	
+	<div><a href="https://inteltechniques.com/blog/2023/01/27/the-privacy-security-osint-show-episode-288/"><button class="btn variant-ghost-primary">Listen</button></a></div></li>
+			<li class="mb-10 ml-10">
+	
+	<span class="absolute flex items-center justify-center w-6 h-6 variant-filled-primary rounded-full -left-3 ring-8 ring-surface-200-700-token"></span>
 
-		<p class="max-sm:mx-6">Multiple <a href="https://github.com/elmasy-com/columbus-scanner">scanner</a>
-			s continuously parsing the following logs:
-		</p>
+	<h3 class="flex items-center mb-1 space-x-2 -translate-y-2"><span>Top Level Domain Lookup</span>
+		<span class="badge variant-soft-primary">Feature</span></h3>
+	<time class="block mb-2">04/2023</time>
+	<p class="mb-4 opacity-75">Columbus can now return all of the known TLDs for the given domain.</p>
+	
+	<div><a href="/tools"><button class="btn variant-ghost-primary">Test it!</button></a>
+				<a href="/swagger/index.html#/tools/get_api_tools_tld__fqdn_"><button class="btn variant-ghost-primary sm:ml-4">Learn how the API works</button></a></div></li>
+			<li class="mb-10 ml-10">
+	
+	<span class="absolute flex items-center justify-center w-6 h-6 variant-filled-secondary rounded-full -left-3 ring-8 ring-surface-200-700-token"></span>
 
-		<ul class="list sm:columns-2 md:columns-3"><li><span class="flex-auto">Argon</span></li>
-			<li><span class="flex-auto"><s>Mammoth</s></span></li>
-			<li><span class="flex-auto">Nessie</span></li>
-			<li><span class="flex-auto">Nimbus</span></li>
-			<li><span class="flex-auto">Oak</span></li>
-			<li><span class="flex-auto">Sabre</span></li>
-			<li><span class="flex-auto">Trustasia</span></li>
-			<li><span class="flex-auto">Xenon</span></li>
-			<li><span class="flex-auto">Yeti</span></li></ul>
-
-		<a class="btn btn-l variant-ghost-primary my-10" href="/tools">Check the usefull tools!</a></div>
-</div></main>
+	<h3 class="flex items-center mb-1 space-x-2 -translate-y-2"><span>???</span>
+		<span class="badge variant-soft-secondary">TODO</span></h3>
+	<time class="block mb-2">??/????</time>
+	<p class="mb-4 opacity-75">More advanced search!</p>
+	
+	</li></ol></div></div></main>
 
 			
 			</div>
@@ -171,7 +200,7 @@
 						import("./_app/immutable/entry/app.4added32.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
-							node_ids: [0, 2, 7],
+							node_ids: [0, 4, 9],
 							data,
 							form: null,
 							error: null
