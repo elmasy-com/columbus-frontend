@@ -48,9 +48,13 @@
 				description="Columbus can now return all of the known TLDs for the given domain."
 				badgeText="Feature"
 			>
-				<a href="/tools"> <button class="btn variant-ghost-primary">Test it!</button> </a>
+				<a href="/tools">
+					<button class="btn variant-ghost-primary">Test it!</button>
+				</a>
 				<a href="/swagger/index.html#/tools/get_api_tools_tld__fqdn_">
-					<button class="btn variant-ghost-primary sm:ml-4">Learn how the API works</button>
+					<button class="btn variant-ghost-primary max-sm:mt-2 sm:ml-4"
+						>Learn how the API works</button
+					>
 				</a>
 			</TimelineItem>
 			<TimelineItem
