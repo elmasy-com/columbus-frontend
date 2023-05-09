@@ -3,8 +3,8 @@
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-10 text-center">
-		<h1 class="font-bold">About</h1>
+	<div class="space-y-10 text-center max-sm:basis-10/12 sm:basis-3/5 md:basis-3/5">
+		<h1 class="font-bold mt-10">About</h1>
 
 		<hr />
 
