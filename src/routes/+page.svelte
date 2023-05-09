@@ -10,6 +10,7 @@
 
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-10 text-center">
+		<img class="max-w-[20%] inline" src="logo_white.svg" alt="Elmasy Logo" />
 		<h1 class="font-bold">Columbus Project</h1>
 		<hr />
 
@@ -28,3 +29,9 @@
 		<Lookup />
 	</div>
 </div>
+
+<style>
+	/* img {
+		max-width: 20%;
+	} */
+</style>
