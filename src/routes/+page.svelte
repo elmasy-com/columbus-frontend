@@ -1,7 +1,7 @@
 <script>
 	import Stat from './Stat.svelte';
 	import Lookup from './Lookup.svelte';
-	import { totalDomain, totalSub } from './stores';
+	import { statTotal, statTld, statFullDomain, statSub } from './stores';
 
 	import { onMount } from 'svelte';
 </script>
@@ -14,15 +14,17 @@
 		<h1 class="font-bold">Columbus Project</h1>
 		<hr />
 
-		{#if $totalDomain == 0 && $totalSub == 0}
+		{#if $statTotal == 0 || $statTld == 0 || $statFullDomain == 0 || $statSub == 0}
 			<p class="max-sm:mx-6">
 				Columbus Project is a subdomain discovery service with an easy to integrate API.
 			</p>
 		{:else}
 			<p class="max-sm:mx-6">
 				Columbus Project is a subdomain discovery service with an easy to integrate API.<br />
-				There are <b>{$totalDomain}</b> number of domains and <b>{$totalSub}</b> number of subdomains
-				in the database.
+				There are <b>{$statTotal}</b> different entries in the database, combined from
+				<b>{$statSub}</b>
+				different subdomains, <b>${statFullDomain}</b> different domains and <b>{$statTld}</b> top level
+				domains.
 			</p>
 		{/if}
 

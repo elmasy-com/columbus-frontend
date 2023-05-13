@@ -1,9 +1,15 @@
 <script>
 	import { onMount } from 'svelte';
-	import { totalDomain, totalSub } from './stores';
+	import { statTotal, statTld, statDomain, statFullDomain, statSub } from './stores';
 
 	onMount(async () => {
-		if ($totalDomain != 0 || $totalSub != 0) {
+		if (
+			$statTotal != 0 ||
+			$statTld != 0 ||
+			$statDomain != 0 ||
+			$statFullDomain != 0 ||
+			$statSub != 0
+		) {
 			return;
 		}
 
@@ -17,12 +23,21 @@
 
 			const statJson = await res.json();
 
-			if (statJson.domain == 0 && statJson.sub == 0) {
+			if (
+				statJson.total == 0 ||
+				statJson.tld == 0 ||
+				statJson.domain == 0 ||
+				statJson.fulldomain == 0 ||
+				statJson.tld == 0
+			) {
 				return;
 			}
 
-			totalDomain.set(statJson.domain);
-			totalSub.set(statJson.sub);
+			statTotal.set(statJson.total);
+			statTld.set(statJson.tld);
+			statDomain.set(statJson.domain);
+			statFullDomain.set(statJson.fulldomain);
+			statSub.set(statJson.sub);
 		} else {
 			console.log('Failed to fetch /stat:' + res.statusText + ' ' + res.text());
 		}
