@@ -58,7 +58,7 @@
 				</a>
 			</TimelineItem>
 			<TimelineItem
-				title="???"
+				title="Secret"
 				timestamp="??/????"
 				description="More advanced search!"
 				badgeText="TODO"
