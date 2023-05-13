@@ -46,17 +46,18 @@
 	{#await promise}
 		<!-- Print only, when domain is set -->
 		{#if domain != ''}
-			<p>...waiting</p>
 			<ProgressBar />
 		{/if}
 	{:then tlds}
 		<!-- Print only when domain and subs are set -->
 		{#if domain != '' && tlds != undefined}
 			{#if tlds.length != 0}
-				<p>Found {tlds.length} TLD.</p>
+				<p class="mx-10 mb-5 py-2 border-2 border-primary-500">
+					Number of TLDs found: <b>{tlds.length}</b>
+				</p>
 			{/if}
 
-			<ol class="list">
+			<ol class="list max-sm:columns-1 sm:columns-2">
 				{#each tlds as tld}
 					<li>
 						{#if tld == ''}
@@ -99,11 +100,5 @@
 	}
 	form input {
 		padding: 0.2em;
-	}
-
-	ol {
-		columns: 3;
-		-webkit-columns: 2;
-		-moz-columns: 2;
 	}
 </style>
