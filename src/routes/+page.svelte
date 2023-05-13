@@ -1,9 +1,6 @@
 <script>
 	import Stat from './Stat.svelte';
-	import Lookup from './Lookup.svelte';
 	import { statTotal, statTld, statFullDomain, statSub } from './stores';
-
-	import { onMount } from 'svelte';
 </script>
 
 <Stat />
