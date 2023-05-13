@@ -16,7 +16,7 @@
 
 	<meta
 		name="description"
-		content="Columbus Project is a blazingly fast API first subdomain discovery service."
+		content="Columbus Project is an API first subdomain discovery service. A blazingly fast subdomain enumeration service with advanced features."
 	/>
 
 	<link rel="icon" href="/icon.svg" type="image/svg+xml" />
@@ -31,7 +31,7 @@
 
 	<meta
 		property="og:description"
-		content="Columbus Project is a blazingly fast API first subdomain discovery service."
+		content="Columbus Project is an API first subdomain discovery service. A blazingly fast subdomain enumeration service with advanced features."
 	/>
 
 	<meta property="og:url" content="https://columbus.elmasy.com/roadmap" />
@@ -48,7 +48,7 @@
 
 	<meta
 		name="twitter:description"
-		content="Columbus Project is a blazingly fast API first subdomain discovery service."
+		content="Columbus Project is an API first subdomain discovery service. A blazingly fast subdomain enumeration service with advanced features."
 	/>
 
 	<meta name="twitter:url" content="https://columbus.elmasy.com/roadmap" />
