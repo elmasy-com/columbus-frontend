@@ -9,22 +9,21 @@
 		<hr />
 
 		<h4 class="max-sm:mx-6">
-			Columbus Project is a subdomain discovery service with an easy to integrate API.
+			Columbus Project is a blazingly fast, API first subdomain enumeration service.
 		</h4>
 
 		<p class="max-sm:mx-6">
-			Columbus Project is a subdomain discovery service with an easy to integrate API.
-			<br />
 			An <a href="https://github.com/elmasy-com?q=columbus&type=all&language=&sort=">open source</a>
 			append only database of known subdomains. The goals are to discover, store and serve subdomains
 			as fast as possible with an easy to use API.
 		</p>
 
-		<img
-			class="mx-auto max-w-screen-lg max-lg:hidden lg:visible"
-			src="/gif/lookup.gif"
-			alt="Subdomain Lookup"
-		/>
+		<figure class="mx-auto max-w-screen-lg max-lg:hidden lg:visible">
+			<img src="/gif/lookup.gif" alt="Subdomain Lookup" />
+			<figcaption class="text-sm italic">
+				Returned 638 subdomains of tesla.com in 0.231 sec.
+			</figcaption>
+		</figure>
 
 		<h2 class="max-sm:mx-6">Sources</h2>
 
