@@ -16,11 +16,15 @@
 
 		{#if $statTotal == 0 || $statTld == 0 || $statFullDomain == 0 || $statSub == 0}
 			<p class="max-sm:mx-6">
-				Columbus Project is a subdomain discovery service with an easy to integrate API.
+				Columbus Project is an API first subdomain discovery service.
+				<br />
+				A blazingly fast subdomain enumeration service with advanced features.
 			</p>
 		{:else}
 			<p class="max-sm:mx-6">
-				Columbus Project is a subdomain discovery service with an easy to integrate API.<br />
+				Columbus Project is an API first subdomain discovery service.
+				<br />
+				A blazingly fast subdomain enumeration service with advanced features. <br />
 				There are <b>{$statTotal}</b> different entries in the database, combined from
 				<b>{$statSub}</b>
 				different subdomains, <b>${statFullDomain}</b> different domains and <b>{$statTld}</b> top level
@@ -28,12 +32,11 @@
 			</p>
 		{/if}
 
-		<Lookup />
+		<a class="btn btn-l variant-ghost-primary max-sm:mx-3 sm:mx-5" href="/tools"
+			>Try out the features</a
+		>
+		<a class="btn btn-l variant-ghost-primary max-sm:mx-3 sm:mx-5" href="/swagger/index.html"
+			>Discover the API</a
+		>
 	</div>
 </div>
-
-<style>
-	/* img {
-		max-width: 20%;
-	} */
-</style>

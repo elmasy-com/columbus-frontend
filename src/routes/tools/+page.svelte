@@ -2,6 +2,7 @@
 
 <script>
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
+	import Lookup from './Lookup.svelte';
 	import DiscTlds from './DiscTlds.svelte';
 	import GetTld from './GetTld.svelte';
 	import GetDomain from './GetDomain.svelte';
@@ -17,6 +18,26 @@
 
 		<Accordion autocollapse class="card p-4 text-token">
 			<AccordionItem open>
+				<svelte:fragment slot="lead"
+					><i class="fa-solid fa-magnifying-glass text-xl w-6 text-center" /></svelte:fragment
+				>
+				<svelte:fragment slot="summary"><p class="font-bold">Subdomain finder</p></svelte:fragment>
+				<svelte:fragment slot="content">
+					<p class="text-left">
+						Find subdomains for the given domain.
+						<br />
+						Returns a list of all known subdomains for the given domain.
+						<br />
+						The domain parameter must be a valid domain (eg.: <code>example.com</code>).
+						<br />
+						Example: <code>/api/lookup/example.com</code> returns
+						<code>["www", "mail", ..."]</code>.
+					</p>
+
+					<Lookup />
+				</svelte:fragment>
+			</AccordionItem>
+			<AccordionItem>
 				<svelte:fragment slot="lead"
 					><i class="fa-solid fa-magnifying-glass text-xl w-6 text-center" /></svelte:fragment
 				>
