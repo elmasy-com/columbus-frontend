@@ -159,7 +159,13 @@ paths:
         Basic domain statistic that holds the total number of domains and
         the total number of subdomains across domains.
         
-        The `date` field is in Unix time format.
+        Fields:
+        - The `date` field is the last update date in Unix time format.
+        - The `total` field is the number of total entries in the database.
+        - The `tld` field is the number of unique top level domains in the database.
+        - The `domain` field is the number of unique domains in the database.
+        - The `fulldomain` field is the nummber of unique domain+TLD combination in the database.
+        - The `sub` field is the number of unique subdomains in the database.
       responses:
         '200':
           description: Success.
@@ -380,7 +386,13 @@ components:
       properties:
         date:
           type: integer
+        total:
+          type: integer
+        tld:
+          type: integer
         domain:
+          type: integer
+        fulldomain:
           type: integer
         sub:
           type: integer
