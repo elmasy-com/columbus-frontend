@@ -24,7 +24,7 @@
 				A blazingly fast subdomain enumeration service with advanced features. <br />
 				There are <b>{$statTotal}</b> different entries in the database, combined from
 				<b>{$statSub}</b>
-				different subdomains, <b>${statFullDomain}</b> different domains and <b>{$statTld}</b> top level
+				different subdomains, <b>{$statFullDomain}</b> different domains and <b>{$statTld}</b> top level
 				domains.
 			</p>
 		{/if}
