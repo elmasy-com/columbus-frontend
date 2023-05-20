@@ -1,6 +1,6 @@
 <script>
 	import Stat from './Stat.svelte';
-	import { statTotal, statTld, statFullDomain, statSub } from './stores';
+	import { statTotal } from './stores';
 </script>
 
 <Stat />
@@ -11,21 +11,21 @@
 		<h1 class="font-bold">Columbus Project</h1>
 		<hr />
 
-		{#if $statTotal == 0 || $statTld == 0 || $statFullDomain == 0 || $statSub == 0}
+		{#if $statTotal == 0}
 			<p class="max-sm:mx-6">
 				Columbus Project is an API first subdomain discovery service.
 				<br />
 				A blazingly fast subdomain enumeration service with advanced features.
+				<br />
+				More than <b>800M</b> unique records and its growin!
 			</p>
 		{:else}
 			<p class="max-sm:mx-6">
 				Columbus Project is an API first subdomain discovery service.
 				<br />
-				A blazingly fast subdomain enumeration service with advanced features. <br />
-				There are <b>{$statTotal}</b> different entries in the database, combined from
-				<b>{$statSub}</b>
-				different subdomains, <b>{$statFullDomain}</b> different domains and <b>{$statTld}</b> top level
-				domains.
+				A blazingly fast subdomain enumeration service with advanced features.
+				<br />
+				More than <b>{$statTotal}</b> unique records and its growing!
 			</p>
 		{/if}
 
