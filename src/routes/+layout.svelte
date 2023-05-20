@@ -26,7 +26,7 @@
 		content="Columbus Project is an API first subdomain discovery service. A blazingly fast subdomain enumeration service with advanced features."
 	/>
 
-	<link rel="icon" href="/icon.svg" type="image/svg+xml" />
+	<link rel="icon" href="https://columbus.elmasy.com/icon.svg" type="image/svg+xml" />
 
 	<link rel="canonical" href="https://columbus.elmasy.com/" />
 
@@ -43,7 +43,7 @@
 
 	<meta property="og:url" content="https://columbus.elmasy.com/" />
 
-	<meta property="og:image" content="/cover.png" />
+	<meta property="og:image" content="https://columbus.elmasy.com/cover.png" />
 
 	<meta property="article:published_time" content="2023-05-09T00:00:00.000Z" />
 
@@ -60,7 +60,7 @@
 
 	<meta name="twitter:url" content="https://columbus.elmasy.com/" />
 
-	<meta name="twitter:image" content="/cover.png" />
+	<meta name="twitter:image" content="https://columbus.elmasy.com/cover.png" />
 
 	<meta name="twitter:label1" content="Written by" />
 
@@ -70,9 +70,9 @@
 
 	<meta name="twitter:data2" content="Columbus - Elmasy" />
 
-	<meta property="og:image:width" content="1501" />
+	<meta property="og:image:width" content="1500" />
 
-	<meta property="og:image:height" content="501" />
+	<meta property="og:image:height" content="500" />
 
 	<meta property="article:tag" content="Elmasy" />
 </svelte:head>
