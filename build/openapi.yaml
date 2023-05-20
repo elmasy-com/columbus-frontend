@@ -388,11 +388,3 @@ components:
           type: integer
         total:
           type: integer
-        tld:
-          type: integer
-        domain:
-          type: integer
-        fulldomain:
-          type: integer
-        sub:
-          type: integer
