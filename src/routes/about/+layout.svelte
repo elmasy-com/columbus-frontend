@@ -68,6 +68,13 @@
 	<meta property="og:image:height" content="500" />
 
 	<meta property="article:tag" content="Elmasy" />
+
+	<script
+		defer
+		data-api="/api/event"
+		data-domain="columbus.elmasy.com"
+		src="/js/script.js"
+	></script>
 </svelte:head>
 
 <!-- App Shell -->
