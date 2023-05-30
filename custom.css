@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Elmasy colors */
+
+.bg-elmasy-black {
+    background-color: #1D1E20;
+}
+
+.bg-elmasy-blue {
+    background-color: #1DDDDD;
+}
+
+.hover\:bg-elmasy-blue:hover {
+    --tw-bg-opacity: 1;
+    background-color: #1DDDDD;
+}
+
+.text-elmasy-white {
+    color: #DADADB;
+}
+
+.text-elmasy-black {
+    color: #1D1E20;
+}
+
+.hover\:text-elmasy-black:hover {
+    --tw-bg-opacity: 1;
+    color: #1D1E20;
+}
+
+.text-elmasy-blue {
+    color: #1DDDDD;
+}
+
+.text-elmasy-red {
+    color: #DD1D2A;
+}
+
+.border-elmasy-blue {
+    --tw-border-opacity: 1;
+    border-color: #1DDDDD;
+}
+
+.border-elmasy-blue-50 {
+    border-color: rgb(29 221 221 / 0.5);
+}
