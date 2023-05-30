@@ -46,3 +46,8 @@
 .border-elmasy-blue-50 {
     border-color: rgb(29 221 221 / 0.5);
 }
+
+.shadow-elmasy-blue-50 {
+    --tw-shadow-color: rgb(29 221 221 / 0.5);
+    --tw-shadow: var(--tw-shadow-colored);
+}
