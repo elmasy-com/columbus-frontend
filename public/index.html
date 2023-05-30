@@ -175,7 +175,7 @@
         </div>
 
         <!-- Features -->
-        <div class="max-lg:max-w-[80%] lg:max-w-[60%] xl:max-w-[40%] mx-auto" id="features">
+        <div class="max-lg:max-w-[80%] lg:max-w-[60%] xl:max-w-[40%] mx-auto my-10" id="features">
 
             <h2 class="text-left text-elmasy-white font-bold text-5xl my-6">
                 Features
@@ -250,6 +250,43 @@
                 </div>
             </div>
 
+            <!-- Starts -->
+            <div class="my-6 p-6 border-x border-b border-elmasy-blue-50 shadow-lg shadow-elmasy-blue-50"
+                id="features_starts">
+
+                <h3 class="py-6 text-4xl border-b border-elmasy-blue-50">
+                    <p class="inline text-left text-elmasy-white text-4xl">Starts</p>
+                    <p class="inline text-left text-elmasy-blue text-xl">-></p>
+                    <p class="inline text-left text-elmasy-white text-xl">Domain finder</p>
+                </h3>
+
+                <p class="mt-6 text-elmasy-white text-left text-base">
+                    Find domains that start with the given string.
+                    Returns a list of all known Second Level Domains thats start with domain, which can be a JSON array
+                    or a newline
+                    delimetered string (for easy parsing).
+                    The domain parameter must be a valid Second Level Domain (eg.: `<code>example</code>`) <b>with at
+                        least five character</b>.
+
+                </p>
+                <br>
+                <p class="max-lg:hidden text-elmasy-white text-left text-base">
+                    The following example shows how this API endpoint works.
+                </p>
+
+                <img class="max-lg:hidden my-6" src="/assets/images/starts.gif" alt="Lookup Gif">
+
+
+                <div class="my-6 flex flex-auto justify-center">
+                    <a href="/swagger/#/domain/get_api_starts__domain_">
+                        <button type="button"
+                            class="border border-elmasy-blue text-elmasy-white hover:text-elmasy-black hover:bg-elmasy-blue rounded-lg text-base px-5 py-2.5 text-center">
+                            Read more about this endpoint!
+                        </button>
+                    </a>
+                </div>
+            </div>
+
 
             <!-- TLD -->
             <div class="my-6 p-6 border-x border-b border-elmasy-blue-50 shadow-lg shadow-elmasy-blue-50"
@@ -286,6 +323,32 @@
                     </a>
                 </div>
             </div>
+        </div>
+
+        <!-- Donate -->
+        <div class="max-lg:max-w-[80%] lg:max-w-[60%] xl:max-w-[40%] mx-auto my-10" id="donate">
+
+            <h2 class="text-left text-elmasy-white font-bold text-5xl my-6">
+                Donate
+            </h2>
+
+            <p class="text-elmasy-white text-left">If you find this service useful, consider donating. Better
+                infrastructure mean faster results and more advanced search queries! 100% of the donations will be used
+                to develop <a class="underline" href="https://elmasy.com">Elmasy</a>.
+            </p>
+
+            <p class="text-elmasy-white text-left">Addresses can be found in the
+                <a class="underline" href="https://app.ens.domains/elmasy.eth">
+                    elmasy.eth
+                </a>
+                ENS domain or in <a class="underline" href="/assets/addresses.txt">/assets/addresses.txt</a> (signed
+                with
+                key 10BC80B36072944B5678AF395D00FD9E9F2A3725).
+            </p>
+
+            <p class="text-elmasy-white text-left font-bold">Feedbacks and PRs are also welcome!</p>
+
+
         </div>
 </body>
 
