@@ -34,13 +34,78 @@ paths:
         
         If a FQDN is requested than the domain name will be taken out and used in the lookup (eg.: `/api/lookup/columbus.elmasy.com` will be the same as `/api/lookup/elmasy.com`)
         
-        *NOTE*: It is not necessary for the subdomain part to exist in the database, the subdomain part will be trimmed (eg.: `/api/lookup/totally.invalid.elmasy.com` will be the same as `/api/lookup/elmasy.com`).
-        
         If `Accept` header is set to `text/plain`, this endpoint returns a newline delimetered text of the list (eg.: `one\ntwo\nthree`).
+        
+        # Note
+        - The subdomain part will be trimmed (eg.: `/api/lookup/totally.invalid.elmasy.com` will be the same as `/api/lookup/elmasy.com`).
+        - If `domain` not found, the server saves for later process. 
       parameters:
         - name: domain
           in: path
           description: Domain to get the subdomains.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StringArray'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/String'
+        '400':
+          description: Invalid domain
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/String'
+        '404':
+          description: Domain not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/String'
+        '500':
+          description: Internal Server Error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/String'
+        '502':
+          description: Bad Gateway. Upstream failed.
+        '504':
+          description: Gateway Timeout. Upstream response takes too long.
+  /api/starts/{domain}:
+    get:
+      tags:
+        - domain
+      summary: Find domains that start with the given string.
+      description: |
+        Find domains that start with the given string.
+        
+        Returns a list of all knowon Second Level Domains thats start with `domain`.
+        
+        The `domain` parameter must be only the Second Level Domain (eg.: `example`) **with at least 5 character**
+        
+        Example: `/api/starts/reddit` returns `["reddit", "redditmedia", "redditstatistic", ...]`.
+        
+        If `Accept` header is set to `text/plain`, this endpoint returns a newline delimetered text of the list.
+      parameters:
+        - name: domain
+          in: path
+          description: Domain to get the TLDs.
           required: true
           schema:
             type: string
