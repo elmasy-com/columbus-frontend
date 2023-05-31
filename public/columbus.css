@@ -36,3 +36,12 @@ html,
 body {
     background-color: #1d1e20;
 }
+
+.markdown p>code,
+.markdown p>a>code {
+    background-color: transparent !important;
+}
+
+.markdown a {
+    text-decoration: underline;
+}

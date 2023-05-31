@@ -262,14 +262,14 @@ Finding the subdomains for <em>tesla.com</em> took <strong>only 0.5 second</stro
         
         <div class="section" id="lookup">
             <div class="container">
-                <h2 class="title is-2 has-text-centered">Lookup Endpint</h2>
+                <h2 class="title is-2 has-text-centered">Lookup Endpoint</h2>
                 
                 <div class="markdown has-text-centered">
                     <p>Returns the subdomains of the given domain in a JSON array or a newline delimetered string (to make scripting easier).</p>
 <p><strong>Took only 0.5 second for this endpoint to return 739 subdomains for <em>tesla.com</em>.</strong></p>
 <p>URL: <code>/api/lookup/{domain}</code></p>
 <p>The <code>domain</code> parameter must be a valid domain (eg.: <code>tesla.com</code>).</p>
-<p>The full documentation is can be found <a href="https://columbus.elmasy.com/swagger/#/domain/get_api_lookup__domain_">here</a>.</p>
+<p>Check the details and try it out in the <a href="https://columbus.elmasy.com/swagger/#/domain/get_api_lookup__domain_">documentation</a>.</p>
 <p>Example:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl <span style="color:#d14">&#34;https://columbus.elmasy.com/api/lookup/tesla.com&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span><span style="color:#d14">&#34;www&#34;</span>, <span style="color:#d14">&#34;mail&#34;</span>, <span style="color:#d14">&#34;shop&#34;</span>, ...<span style="color:#000;font-weight:bold">]</span>
@@ -312,7 +312,7 @@ Finding the subdomains for <em>tesla.com</em> took <strong>only 0.5 second</stro
 <p><strong>This endpoint returns 1809 domains that starts with <em>&ldquo;reddit&rdquo;</em> in less than 4 seconds.</strong></p>
 <p>URL: <code>/api/starts/{domain}</code></p>
 <p>The <code>domain</code> parameter must be at least five character long, valid Second Level Domain (eg.: <code>example</code>).</p>
-<p>Read the documentation <a href="https://columbus.elmasy.com/swagger/#/domain/get_api_starts__domain_">here</a>.</p>
+<p>Read the details and try it youself in the <a href="https://columbus.elmasy.com/swagger/#/domain/get_api_starts__domain_">documentation</a>.</p>
 <p>Example:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl <span style="color:#d14">&#34;https://columbus.elmasy.com/api/starts/reddit&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span><span style="color:#d14">&#34;reddit&#34;</span>, <span style="color:#d14">&#34;redditmedia&#34;</span>, <span style="color:#d14">&#34;redditstatistic&#34;</span>, ...<span style="color:#000;font-weight:bold">]</span>
@@ -355,7 +355,7 @@ Finding the subdomains for <em>tesla.com</em> took <strong>only 0.5 second</stro
 <p><strong>Took around 1 second for this endpoint to return 375 TLD for <em>google</em>.</strong></p>
 <p>URL: <code>/api/tld/{domain}</code></p>
 <p>The domain parameter must be a valid Second Level Domain (eg.: example).</p>
-<p>Learn more about this endpoint <a href="https://columbus.elmasy.com/swagger/#/domain/get_api_tld__domain_">here</a>.</p>
+<p>Learn more about this endpoint in the <a href="https://columbus.elmasy.com/swagger/#/domain/get_api_tld__domain_">documentation</a>.</p>
 <p>Example:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl <span style="color:#d14">&#34;https://columbus.elmasy.com/api/tld/google&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span><span style="color:#d14">&#34;com&#34;</span>, <span style="color:#d14">&#34;hu&#34;</span>, <span style="color:#d14">&#34;co&#34;</span>, ...<span style="color:#000;font-weight:bold">]</span>
