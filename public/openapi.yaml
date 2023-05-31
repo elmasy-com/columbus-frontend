@@ -28,9 +28,10 @@ paths:
         - domain
       summary: Lookup subdomains for domain.
       description: |
-        Returns a list of subdomains.
+      
+        Returns an array of subdomains.
 
-        The returned contains the subdomains only, the domain not included (eg.: `["one", "two", ...]`).
+        The response contains the subdomains only, the domain not included (eg.: `["one", "two", ...]`).
         
         If a FQDN is requested than the domain name will be taken out and used in the lookup (eg.: `/api/lookup/columbus.elmasy.com` will be the same as `/api/lookup/elmasy.com`)
         
@@ -94,15 +95,19 @@ paths:
         - domain
       summary: Find domains that start with the given string.
       description: |
-        Find domains that start with the given string.
+      
+        Return an array of Second Level Domains thats start with `domain`.
         
-        Returns a list of all knowon Second Level Domains thats start with `domain`.
-        
-        The `domain` parameter must be only the Second Level Domain (eg.: `example`) **with at least 5 character**
+        The `domain` parameter must be a Second Level Domain (eg.: `example`) 
         
         Example: `/api/starts/reddit` returns `["reddit", "redditmedia", "redditstatistic", ...]`.
         
         If `Accept` header is set to `text/plain`, this endpoint returns a newline delimetered text of the list.
+        
+        # Note
+        - The `domain`'s length mist be greater than 4 character.
+        - Only the SLDs are sent in the response to save CPU and RAM on the server side and save bandwith on both client- and server-side.
+
       parameters:
         - name: domain
           in: path
@@ -158,15 +163,15 @@ paths:
         - domain
       summary: Find TLDs for the given domain.
       description: |
-        Find TLDs for the given domain.
-
+      
         Returns a list of all known Top Level Domains for the given domain.
         
-        The `domain` parameter must be only the Second Level Domain (eg.: `example`)
+        The domain parameter must be a Second Level Domain (eg.: example).
         
         Example: `/api/tld/example` returns `["com", "org", "net"]`.
         
         If `Accept` header is set to `text/plain`, this endpoint returns a newline delimetered text of the list (eg.: `com\norg\nnet`).
+        
       parameters:
         - name: domain
           in: path
