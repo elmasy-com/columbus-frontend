@@ -1,5 +1,5 @@
 ---
-title: "Lookup Endpint"
+title: "Lookup Endpoint"
 weight: 0
 ---
 
@@ -11,7 +11,7 @@ URL: `/api/lookup/{domain}`
 
 The `domain` parameter must be a valid domain (eg.: `tesla.com`). 
 
-The full documentation is can be found [here](https://columbus.elmasy.com/swagger/#/domain/get_api_lookup__domain_).
+Check the details and try it out in the [documentation](https://columbus.elmasy.com/swagger/#/domain/get_api_lookup__domain_).
 
 Example:
 

@@ -11,7 +11,7 @@ URL: `/api/tld/{domain}`
 
 The domain parameter must be a valid Second Level Domain (eg.: example).
 
-Learn more about this endpoint [here](https://columbus.elmasy.com/swagger/#/domain/get_api_tld__domain_).
+Learn more about this endpoint in the [documentation](https://columbus.elmasy.com/swagger/#/domain/get_api_tld__domain_).
 
 Example:
 
