@@ -134,7 +134,7 @@ DefaultContentLanguage           = "en"                    # Default language fo
         weight           = 0
         title            = "Columbus Project - Advanced subdomain enumeration service"
         [languages.en.params]
-            description  = "Columbus Project is an API-first subdomain discovery service. A blazingly fast subdomain enumeration service with advanced features and easy to integrate endpoints."   # Max 160 characters show in search results
+            description  = "Columbus Project is an API-first subdomain discovery service. A blazingly fast subdomain enumeration service with advanced queries."   # Max 160 characters show in search results
             # footerText   = ""                      # Text to override default footer text (markdown allowed)
 
     # [languages.es]
