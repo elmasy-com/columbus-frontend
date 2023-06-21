@@ -13,7 +13,7 @@ URL: `/api/starts/{domain}`
 
 The `domain` parameter must be at least five character long, valid Second Level Domain (eg.: `example`). 
 
-Read the details and try it youself in the [documentation](https://columbus.elmasy.com/swagger/#/domain/get_api_starts__domain_).
+Read the details and try it yourself in the [documentation](https://columbus.elmasy.com/swagger/#/domain/get_api_starts__domain_).
 
 Example:
 
