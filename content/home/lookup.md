@@ -5,7 +5,9 @@ weight: 0
 
 Returns the subdomains of the given domain in a JSON array or a newline delimetered string (to make scripting easier).
 
-**Took only 0.5 second for this endpoint to return 739 subdomains for *tesla.com*.**
+<img class="hidden-gif" src="/lookup.gif" alt="Lookup Gif">
+
+<p class="p-center"><strong>Took less than a second for this endpoint to return 739 subdomains for <em>tesla.com</em>.</strong></p>
 
 URL: `/api/lookup/{domain}`
 
@@ -25,5 +27,3 @@ mail
 shop
 ...
 ```
-
-
