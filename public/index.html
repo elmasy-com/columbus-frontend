@@ -152,7 +152,7 @@
             
             <a class="navbar-item" href="#lookup">
                 
-                Lookup API
+                Lookup
                 
             </a>
             
@@ -160,7 +160,7 @@
             
             <a class="navbar-item" href="#starts">
                 
-                Starts API
+                Starts
                 
             </a>
             
@@ -168,7 +168,7 @@
             
             <a class="navbar-item" href="#tld">
                 
-                TLD API
+                TLD
                 
             </a>
             
@@ -177,6 +177,14 @@
             <a class="navbar-item" href="/swagger/">
                 
                 API Documentation
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="#privacy">
+                
+                Privacy
                 
             </a>
             
@@ -230,7 +238,7 @@
                         <p>Columbus Project is an API-first subdomain discovery service.</p>
 <p>A blazingly fast subdomain enumeration service with advanced queries.</p>
 <p>The goal of the project is to create an easy to integrate, yet powerful APIs.</p>
-<p>There are <strong>nearly 900M unique records</strong> are stored in the database.</p>
+<p>There are <strong id="totalEntry">more than 900M</strong> unique records are stored in the database.</p>
 <p>Because every domain in MongoDB is indexed in the memory, Columbus can returns the result in seconds.
 Finding the subdomains for <em>tesla.com</em> took <strong>only 0.5 second</strong> for the Lookup endpoint.</p>
 
@@ -266,15 +274,16 @@ Finding the subdomains for <em>tesla.com</em> took <strong>only 0.5 second</stro
                 
                 <div class="markdown has-text-centered">
                     <p>Returns the subdomains of the given domain in a JSON array or a newline delimetered string (to make scripting easier).</p>
-<p><strong>Took only 0.5 second for this endpoint to return 739 subdomains for <em>tesla.com</em>.</strong></p>
+<img class="hidden-gif" src="/lookup.gif" alt="Lookup Gif">
+<p class="p-center"><strong>Took less than a second for this endpoint to return 739 subdomains for <em>tesla.com</em>.</strong></p>
 <p>URL: <code>/api/lookup/{domain}</code></p>
 <p>The <code>domain</code> parameter must be a valid domain (eg.: <code>tesla.com</code>).</p>
 <p>Check the details and try it out in the <a href="https://columbus.elmasy.com/swagger/#/domain/get_api_lookup__domain_">documentation</a>.</p>
 <p>Example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl <span style="color:#d14">&#34;https://columbus.elmasy.com/api/lookup/tesla.com&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span><span style="color:#d14">&#34;www&#34;</span>, <span style="color:#d14">&#34;mail&#34;</span>, <span style="color:#d14">&#34;shop&#34;</span>, ...<span style="color:#000;font-weight:bold">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl <span style="color:#ed9d13">&#34;https://columbus.elmasy.com/api/lookup/tesla.com&#34;</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#ed9d13">&#34;www&#34;</span>, <span style="color:#ed9d13">&#34;mail&#34;</span>, <span style="color:#ed9d13">&#34;shop&#34;</span>, ...]
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>$ curl -H <span style="color:#d14">&#34;Accept: text/plain&#34;</span> <span style="color:#d14">&#34;https://columbus.elmasy.com/api/lookup/tesla.com&#34;</span>
+</span></span><span style="display:flex;"><span>$ curl -H <span style="color:#ed9d13">&#34;Accept: text/plain&#34;</span> <span style="color:#ed9d13">&#34;https://columbus.elmasy.com/api/lookup/tesla.com&#34;</span>
 </span></span><span style="display:flex;"><span>www
 </span></span><span style="display:flex;"><span>mail
 </span></span><span style="display:flex;"><span>shop
@@ -309,15 +318,16 @@ Finding the subdomains for <em>tesla.com</em> took <strong>only 0.5 second</stro
                 
                 <div class="markdown has-text-centered">
                     <p>Returns a list of all known Second Level Domains thats start with the given domain in a JSON array or a newline delimetered string.</p>
-<p><strong>This endpoint returns 1809 domains that starts with <em>&ldquo;reddit&rdquo;</em> in less than 4 seconds.</strong></p>
+<img class="hidden-gif" src="/starts.gif" alt="Starts Gif">
+<p class="p-center"><strong>This endpoint can returns 1809 domains that starts with <em>"reddit"</em> in less than 4 seconds.</strong></p>
 <p>URL: <code>/api/starts/{domain}</code></p>
 <p>The <code>domain</code> parameter must be at least five character long, valid Second Level Domain (eg.: <code>example</code>).</p>
 <p>Read the details and try it youself in the <a href="https://columbus.elmasy.com/swagger/#/domain/get_api_starts__domain_">documentation</a>.</p>
 <p>Example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl <span style="color:#d14">&#34;https://columbus.elmasy.com/api/starts/reddit&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span><span style="color:#d14">&#34;reddit&#34;</span>, <span style="color:#d14">&#34;redditmedia&#34;</span>, <span style="color:#d14">&#34;redditstatistic&#34;</span>, ...<span style="color:#000;font-weight:bold">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl <span style="color:#ed9d13">&#34;https://columbus.elmasy.com/api/starts/reddit&#34;</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#ed9d13">&#34;reddit&#34;</span>, <span style="color:#ed9d13">&#34;redditmedia&#34;</span>, <span style="color:#ed9d13">&#34;redditstatistic&#34;</span>, ...]
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>$ curl -H <span style="color:#d14">&#34;Accept: text/plain&#34;</span> <span style="color:#d14">&#34;https://columbus.elmasy.com/api/starts/reddit&#34;</span>
+</span></span><span style="display:flex;"><span>$ curl -H <span style="color:#ed9d13">&#34;Accept: text/plain&#34;</span> <span style="color:#ed9d13">&#34;https://columbus.elmasy.com/api/starts/reddit&#34;</span>
 </span></span><span style="display:flex;"><span>reddit
 </span></span><span style="display:flex;"><span>redditmedia
 </span></span><span style="display:flex;"><span>redditstatistic
@@ -352,20 +362,56 @@ Finding the subdomains for <em>tesla.com</em> took <strong>only 0.5 second</stro
                 
                 <div class="markdown has-text-centered">
                     <p>Returns a list of all known Top Level Domains for the given domain.</p>
-<p><strong>Took around 1 second for this endpoint to return 375 TLD for <em>google</em>.</strong></p>
+<img class="hidden-gif" src="/tld.gif" alt="TLD Gif">
+<p class="p-center"><strong>This endpoint can returns 377 different Top Level Domain for <em>google</em> in less than a second.</strong></p>
 <p>URL: <code>/api/tld/{domain}</code></p>
 <p>The domain parameter must be a valid Second Level Domain (eg.: example).</p>
 <p>Learn more about this endpoint in the <a href="https://columbus.elmasy.com/swagger/#/domain/get_api_tld__domain_">documentation</a>.</p>
 <p>Example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl <span style="color:#d14">&#34;https://columbus.elmasy.com/api/tld/google&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span><span style="color:#d14">&#34;com&#34;</span>, <span style="color:#d14">&#34;hu&#34;</span>, <span style="color:#d14">&#34;co&#34;</span>, ...<span style="color:#000;font-weight:bold">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl <span style="color:#ed9d13">&#34;https://columbus.elmasy.com/api/tld/google&#34;</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#ed9d13">&#34;com&#34;</span>, <span style="color:#ed9d13">&#34;hu&#34;</span>, <span style="color:#ed9d13">&#34;co&#34;</span>, ...]
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>$ curl -H <span style="color:#d14">&#34;Accept: text/plain&#34;</span> <span style="color:#d14">&#34;https://columbus.elmasy.com/api/tld/google&#34;</span>
+</span></span><span style="display:flex;"><span>$ curl -H <span style="color:#ed9d13">&#34;Accept: text/plain&#34;</span> <span style="color:#ed9d13">&#34;https://columbus.elmasy.com/api/tld/google&#34;</span>
 </span></span><span style="display:flex;"><span>com
 </span></span><span style="display:flex;"><span>hu
 </span></span><span style="display:flex;"><span>co
 </span></span><span style="display:flex;"><span>...
 </span></span></code></pre></div>
+                </div>
+                
+            </div>
+            
+            <div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+        </div>
+        <div class="container">
+            <hr>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+
+        
+        <div class="section" id="privacy">
+            <div class="container">
+                <h2 class="title is-2 has-text-centered">Privacy Policy</h2>
+                
+                <div class="markdown has-text-centered">
+                    <ul>
+<li>Every request to the server logged and stored for 30 days.</li>
+<li>The website is using the <a href="https://plausible.io/privacy-focused-web-analytics">privacy-friendly</a> Plausible to collect analytics.</li>
+<li>Successful queries to <code>/api/lookup</code> saves <strong>only</strong> the <code>domain</code> parameter for further process. See the relevant code <a href="https://github.com/elmasy-com/columbus-server/blob/dae62d64fe85391e4257a219ea5324e782fb1cc2/server/lookup.go#L61">here</a>.</li>
+<li>Failed queries to <code>/api/lookup</code> saves <strong>only</strong> the <code>domain</code> parameter for further process. See the relevant code <a href="https://github.com/elmasy-com/columbus-server/blob/dae62d64fe85391e4257a219ea5324e782fb1cc2/server/lookup.go#L48">here</a>.</li>
+</ul>
+
                 </div>
                 
             </div>
@@ -460,6 +506,7 @@ Finding the subdomains for <em>tesla.com</em> took <strong>only 0.5 second</stro
 
 
 
+    <script src="https://beta.columbus.elmasy.com/columbus.min.js" integrity=""></script>
 
         
 

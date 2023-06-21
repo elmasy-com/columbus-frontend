@@ -1,5 +1,6 @@
-img.avatar {
+img {
     border-radius: 0px !important;
+    border: none;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4) !important;
 }
 
@@ -44,4 +45,25 @@ body {
 
 .markdown a {
     text-decoration: underline;
+}
+
+@media not all and (min-width: 1024px) {
+
+    .hidden-gif {
+
+        display: none !important;
+
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .hidden-gif {
+        margin-bottom: 0px !important;
+    }
+
+    .p-center {
+        text-align: center !important;
+        margin-top: 0px !important;
+    }
 }
