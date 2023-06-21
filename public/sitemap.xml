@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://beta.columbus.elmasy.com/</loc>
+    <loc>https://columbus.elmasy.com/</loc>
   </url><url>
-    <loc>https://beta.columbus.elmasy.com/series/</loc>
+    <loc>https://columbus.elmasy.com/series/</loc>
   </url><url>
-    <loc>https://beta.columbus.elmasy.com/tags/</loc>
+    <loc>https://columbus.elmasy.com/tags/</loc>
   </url>
 </urlset>
