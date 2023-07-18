@@ -11,7 +11,9 @@ Returns the subdomains of the given domain in a JSON array or a newline delimete
 
 URL: `/api/lookup/{domain}`
 
-The `domain` parameter must be a valid domain (eg.: `tesla.com`). 
+The `domain` parameter must be a valid domain (eg.: `tesla.com`).
+
+The `date` parameter can be used to finetune the result.
 
 Check the details and try it out in the [documentation](https://columbus.elmasy.com/swagger/#/domain/get_api_lookup__domain_).
 

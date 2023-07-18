@@ -1,6 +1,6 @@
 ---
 title: "TLD Endpoint"
-weight: 2
+weight: 3
 ---
 
 Returns a list of all known Top Level Domains for the given domain.

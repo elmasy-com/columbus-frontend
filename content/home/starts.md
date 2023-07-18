@@ -1,6 +1,6 @@
 ---
 title: "Starts Endpoint"
-weight: 1
+weight: 2
 ---
 
 Returns a list of all known Second Level Domains thats start with the given domain in a JSON array or a newline delimetered string.
