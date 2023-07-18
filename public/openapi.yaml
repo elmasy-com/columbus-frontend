@@ -51,10 +51,11 @@ paths:
         - name: days
           in: query
           description:  | 
-            Returns subdomains that has a valid DNS record in the last `n` days.
-            The number must be greater than 0.
-            
-            If omitted, returns every subdomain including historical and invalid ones.
+            - If `days` greater than 0, returns subdomains that has a valid DNS record in the last `days` days.
+            - If `days` is 0, returns subdomains that has a valid DNS record regardless of the age.
+            - If `days` is -1, returns every known subdomains.
+
+            If omitted, returns every subdomain including historical and invalid ones (aka the default `days` is -1). 
           required: false
           schema:
             type: integer
@@ -226,6 +227,65 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/String'
+        '502':
+          description: Bad Gateway. Upstream failed.
+        '504':
+          description: Gateway Timeout. Upstream response takes too long.
+  /api/history/{domain}:
+    get:
+      tags:
+        - domain
+      summary: History of the given domain.
+      description: |
+    
+        Returns the DNS history of the given FQDN.
+        
+        The `type` codes can be found here: [https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml](https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml)
+        
+        # Note
+        - **EXPERIMENTAL FEATURE**
+      parameters:
+        - name: domain
+          in: path
+          description: Fully Qualified Domain Name to get the subdomains.
+          required: true
+          schema:
+            type: string
+        - name: days
+          in: query
+          description:  | 
+            - If `days` greater than 0, returns records seen in the last `days` days.
+            - If `days` is 0 or -1, returns subdomains every records regardless of the age.
+
+            If omitted, returns every records (aka the default `days` is -1).
+          required: false
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Records'
+        '400':
+          description: Invalid domain or days
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: No records found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal Server Error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
         '502':
           description: Bad Gateway. Upstream failed.
         '504':
@@ -468,3 +528,14 @@ components:
           type: integer
         valid:
           type: integer
+    Records:
+        type: array
+        items:
+            type: object
+            properties:
+              type:
+                type: integer
+              value:
+                type: string
+              time:
+                type: integer
