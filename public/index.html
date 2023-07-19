@@ -330,13 +330,13 @@ Finding the subdomains for <em>tesla.com</em> took <strong>only 0.5 second</stro
 <p>Columbus finds and stores the DNS records (eg.: A and AAAA) in the database to be used as a domain history tool.
 If a known record found, updates the <code>time</code> field to the current time in unix timestamp.
 If a new record found, appends to the records history.</p>
+<p>Note: this is an <strong>EXPERIMENTAL FEATURE</strong>!</p>
 <img class="hidden-gif" src="/history.gif" alt="History Gif">
-<p class="p-center"><strong>Get the DNS history of <em>"columbus.elmasy.com"</em>.</strong></p>
+<p class="p-center"><strong>This endpoint will store every DNS record of <em>"columbus.elmasy.com"</em> and returns it is seconds.</strong></p>
 <p>URL: <code>/api/history/{domain}</code></p>
 <p>The <code>domain</code> parameter must be a valid domain (eg.: <code>example.com</code>).</p>
 <p>The <code>date</code> parameter can be used to finetune the result.</p>
 <p>Check the details and try it out in the <a href="https://columbus.elmasy.com/swagger/#/domain/get_api_history__domain_">documentation</a>.</p>
-<p>Note: this is an <strong>EXPERIMENTAL FEATURE</strong>!</p>
 <p>Example:</p>
 <div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl <span style="color:#ed9d13">&#34;https://columbus.elmasy.com/api/history/columbus.elmasy.com&#34;</span>
 </span></span><span style="display:flex;"><span>[{<span style="color:#ed9d13">&#34;type&#34;</span>:1,<span style="color:#ed9d13">&#34;value&#34;</span>:<span style="color:#ed9d13">&#34;142.132.164.231&#34;</span>,<span style="color:#ed9d13">&#34;time&#34;</span>:1689723813},{<span style="color:#ed9d13">&#34;type&#34;</span>:28,<span style="color:#ed9d13">&#34;value&#34;</span>:<span style="color:#ed9d13">&#34;2a01:4f8:1c1e:eddd::1&#34;</span>,<span style="color:#ed9d13">&#34;time&#34;</span>:1689723813}]
