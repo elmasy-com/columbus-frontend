@@ -19,7 +19,7 @@ URL: `/api/history/{domain}`
 
 The `domain` parameter must be a valid domain (eg.: `example.com`). 
 
-The `date` parameter can be used to finetune the result.
+The `days` parameter can be used to finetune the result.
 
 Check the details and try it out in the [documentation](https://columbus.elmasy.com/swagger/#/domain/get_api_history__domain_).
 

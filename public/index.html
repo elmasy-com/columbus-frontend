@@ -286,7 +286,7 @@ Finding the subdomains for <em>tesla.com</em> took <strong>only 0.5 second</stro
 <p class="p-center"><strong>Took less than a second for this endpoint to return 739 subdomains for <em>tesla.com</em>.</strong></p>
 <p>URL: <code>/api/lookup/{domain}</code></p>
 <p>The <code>domain</code> parameter must be a valid domain (eg.: <code>tesla.com</code>).</p>
-<p>The <code>date</code> parameter can be used to finetune the result.</p>
+<p>The <code>days</code> parameter can be used to finetune the result.</p>
 <p>Check the details and try it out in the <a href="https://columbus.elmasy.com/swagger/#/domain/get_api_lookup__domain_">documentation</a>.</p>
 <p>Example:</p>
 <div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl <span style="color:#ed9d13">&#34;https://columbus.elmasy.com/api/lookup/tesla.com&#34;</span>
@@ -335,7 +335,7 @@ If a new record found, appends to the records history.</p>
 <p class="p-center"><strong>This endpoint will store every DNS record of <em>"columbus.elmasy.com"</em> and returns it is seconds.</strong></p>
 <p>URL: <code>/api/history/{domain}</code></p>
 <p>The <code>domain</code> parameter must be a valid domain (eg.: <code>example.com</code>).</p>
-<p>The <code>date</code> parameter can be used to finetune the result.</p>
+<p>The <code>days</code> parameter can be used to finetune the result.</p>
 <p>Check the details and try it out in the <a href="https://columbus.elmasy.com/swagger/#/domain/get_api_history__domain_">documentation</a>.</p>
 <p>Example:</p>
 <div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl <span style="color:#ed9d13">&#34;https://columbus.elmasy.com/api/history/columbus.elmasy.com&#34;</span>
