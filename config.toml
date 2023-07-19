@@ -99,17 +99,21 @@ DefaultContentLanguage           = "en"                    # Default language fo
     url     = "#tld"
     weight  = 5
 [[menu.main]]
+    name    = "DNS Server"
+    url     = "#dns"
+    weight  = 6
+[[menu.main]]
     name    = "API Documentation"
     url     = "/swagger/"
-    weight  = 6
+    weight  = 7
 [[menu.main]]
     name    = "Privacy"
     url     = "#privacy"
-    weight  = 7
+    weight  = 8
 [[menu.main]]
     name    = "Contact"
     url     = "#contact"
-    weight  = 8
+    weight  = 9
 
 # We only use tag as a taxonomies
 # You can add more by yourself

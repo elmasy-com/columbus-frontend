@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-weight: 4
+weight: 5
 ---
 
 - Every request to the server logged and stored for 30 days.
