@@ -303,6 +303,7 @@ paths:
         Fields:
         - The `date` field is the last update date in Unix time format.
         - The `total` field is the number of total entries in the database.
+        - The `updated` field is the number of total entries updated (including entries that updated, but no valid DNS record found).
         - The `valid` field is the number of total domains that has at least one known DNS record.
       responses:
         '200':
@@ -525,6 +526,8 @@ components:
         date:
           type: integer
         total:
+          type: integer
+        updated:
           type: integer
         valid:
           type: integer
