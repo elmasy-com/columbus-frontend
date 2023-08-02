@@ -14,3 +14,7 @@ The goal of the project is to create an easy to integrate, yet powerful APIs.
 
 Because every domain in MongoDB is indexed in the memory, Columbus can returns the result in seconds.
 Finding the subdomains for *tesla.com* took **only 0.5 second** for the Lookup endpoint.
+
+<div style="margin: 0 auto; text-align: center">
+<a style="display: inline-block; margin: auto; color: #1d1e20; padding: 15px 32px; background-color: #1DDDDD; border: none; text-align: center; text-decoration: none;" href="/search">Try it out!</a>
+</div>

@@ -3,14 +3,9 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://columbus.elmasy.com/</loc>
-  </url>
-  <url>
-    <loc>https://columbus.elmasy.com/stat</loc>
-  </url>
-  <url>
+  </url><url>
     <loc>https://columbus.elmasy.com/series/</loc>
-  </url>
-  <url>
+  </url><url>
     <loc>https://columbus.elmasy.com/tags/</loc>
   </url>
 </urlset>
