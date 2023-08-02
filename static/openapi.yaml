@@ -305,7 +305,7 @@ paths:
         - The `total` field is the number of total entries in the database.
         - The `updated` field is the number of total entries updated (including entries that updated, but no valid DNS record found).
         - The `valid` field is the number of total domains that has at least one known DNS record.
-        - The `scanners` field is an array that holds the stats of the crawled Certificate Transparency Logs.
+        - The `ctlogs` field is an array that holds the stats of the crawled Certificate Transparency Logs.
           - The `name` is the name of the log.
           - The `index` is the current index of the crawler.
           - The `size` is the total number of entries in the log.
@@ -316,10 +316,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Stat'
-        '204':
-          description: The background process is started recently and currently cant give useful information. Try again later.
-        '503':
-          description: The API is not enabled
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
   
   /api/tools/tld/{fqdn}:
     get:
@@ -535,7 +537,7 @@ components:
           type: integer
         valid:
           type: integer
-        scanners:
+        ctlogs:
           type: array
           items:
             type: object
