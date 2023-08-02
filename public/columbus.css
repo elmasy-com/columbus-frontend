@@ -67,3 +67,28 @@ body {
         margin-top: 0px !important;
     }
 }
+
+.markdown table {
+    border: none;
+}
+
+.markdown th,
+.markdown td {
+    background-color: #1d1e20 !important;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid #DADADB !important;
+}
+
+.markdown th {
+    color: #1DDDDD;
+}
+
+.markdown td {
+    color: #DADADB;
+}
+
+.markdown tbody {
+    background-color: #1d1e20;
+}
